@@ -1,5 +1,6 @@
 # Programación web
 
-**Alumno:** Carlos Daniel Morín Rábago
-**Control:** 19100222
+**Alumno:** Carlos Daniel Morín Rábago  
+**Control:** 19100222  
+
 
