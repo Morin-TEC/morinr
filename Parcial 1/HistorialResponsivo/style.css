@@ -1,0 +1,32 @@
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th,
+td {
+    border: 2px solid rgb(10, 37, 68);
+    padding: 10px;
+}
+
+th {
+    background-color: #4294d8;
+}
+
+.Nivel {
+    font-weight: bold;
+}
+
+tr:nth-child(odd) {
+    background-color: #458ed3;
+}
+
+tr:nth-child(even) {
+    background-color: #4a9dd4;
+}
+
+tfoot td {
+    font-size: large;
+    font-weight: bold;
+}
