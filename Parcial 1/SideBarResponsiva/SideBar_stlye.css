@@ -7,7 +7,7 @@
 div.sidebar {
     position: fixed;
     background: #448d3a;
-    color: #fff;
+    color: rgb(158, 207, 240);
     width: 200px;
     height: 100%;
     overflow: auto;
@@ -17,7 +17,7 @@ div.sidebar {
     text-align: center;
     margin: 0;
     padding: 7px;
-    background: #531557;
+    background: #8b32d4;
 }
 
 a {
@@ -25,7 +25,7 @@ a {
     text-decoration: none;
     padding: 7px;
     font-size: larger;
-    color: #fff;
+    color: rgb(158, 19, 19);
 }
 
 a:visited {
@@ -33,22 +33,22 @@ a:visited {
 }
 
 a:hover {
-    background: #946894;
-    border-left: 4px solid #eee;
+    background: #4249a3;
+    border-left: 4px solid rgb(207, 253, 0);
     padding-left: 5px;
 }
 
 a:active {
-    background: #5c2a70;
-    border-left: 3px solid rgb(40, 6, 80);
+    background: #2a4e70;
+    border-left: 3px solid rgb(44, 160, 82);
     color: #fff;
 }
 
 div.content {
-    background-color: rgb(204, 183, 224);
+    background-color: rgb(70, 160, 110);
     margin-left: 200px;
     padding: 1px 16px;
-    height: 1200px;
+    height: 1000px;
 }
 
 .subOpcion {
@@ -79,7 +79,7 @@ input:checked~.content {
 label {
     font-size: large;
     font-weight: bold;
-    color: #330844;
+    color: #083644;
 }
 
 .Icono {
@@ -93,21 +93,21 @@ label {
 }
 
 p {
-    font-weight: bold;
-    color: #2d003f;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
+    font-weight: normal;
+    color: #000000;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
 
 #Home {
     text-align: center;
     margin: 0;
-    font-size: larger;
+    font-size: xx-large;
 }
 
 .Detalles {
     text-align: justify;
     padding: 10px;
-    font-size: medium;
+    font-size: x-large;
 }
 
 @media screen and (max-width: 1200px) {
@@ -140,8 +140,8 @@ p {
         font-weight: bold;
     }
     .Imagen {
-        width: 85px;
-        height: 85px;
+        width: 100px;
+        height: 100px;
     }
 }
 
@@ -150,8 +150,8 @@ p {
         font-size: medium;
     }
     .sidebar a>img {
-        width: 20px;
-        height: 20px;
+        width: 100px;
+        height: 100px;
     }
     .Detalles {
         font-size: small;
@@ -173,7 +173,7 @@ p {
         font-size: small;
     }
     .Imagen {
-        width: 75px;
-        height: 75px;
+        width: 100px;
+        height: 100px;
     }
 }
