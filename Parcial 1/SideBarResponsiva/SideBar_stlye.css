@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+div.sidebar {
+    position: fixed;
+    background: #6f3f70;
+    color: #fff;
+    width: 200px;
+    height: 100%;
+    overflow: auto;
+}
+
+.sidebar>h2 {
+    text-align: center;
+    margin: 0;
+    padding: 7px;
+    background: #531557;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    padding: 7px;
+    font-size: larger;
+    color: #fff;
+}
+
+a:visited {
+    color: #fff;
+}
+
+a:hover {
+    background: #946894;
+    border-left: 4px solid #eee;
+    padding-left: 5px;
+}
+
+a:active {
+    background: #5c2a70;
+    border-left: 3px solid rgb(40, 6, 80);
+    color: #fff;
+}
+
+div.content {
+    background-color: rgb(204, 183, 224);
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1200px;
+}
+
+.subOpcion {
+    display: none;
+}
+
+#Inicio:target,
+#PlayStation:target,
+#Xbox:target,
+#Nintendo:target,
+#Steam:target,
+#Android:target {
+    display: block;
+}
+
+input {
+    display: none;
+}
+
+input:checked+.sidebar {
+    width: 0px;
+}
+
+input:checked~.content {
+    margin-left: 0px;
+}
+
+label {
+    font-size: large;
+    font-weight: bold;
+    color: #330844;
+}
+
+.Icono {
+    vertical-align: middle;
+}
+
+.Imagen {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    font-weight: bold;
+    color: #2d003f;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+#Home {
+    text-align: center;
+    margin: 0;
+    font-size: larger;
+}
+
+.Detalles {
+    text-align: justify;
+    padding: 10px;
+    font-size: medium;
+}
+
+@media screen and (max-width: 1200px) {
+    div.sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    .sidebar h2 {
+        float: none;
+        text-align: center;
+    }
+    .sidebar a {
+        padding: 5px 0%;
+        float: left;
+        width: calc(100%/6);
+        font-size: large;
+    }
+    div.content {
+        margin-left: 0;
+    }
+    input:checked+.sidebar {
+        height: 0px;
+    }
+    input:checked~.content {
+        margin-top: 0px;
+    }
+    #Home {
+        font-size: medium;
+        font-weight: bold;
+    }
+    .Imagen {
+        width: 85px;
+        height: 85px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .sidebar a {
+        font-size: medium;
+    }
+    .sidebar a>img {
+        width: 20px;
+        height: 20px;
+    }
+    .Detalles {
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sidebar h2 {
+        float: none;
+        text-align: center;
+    }
+    .sidebar a {
+        padding: 5px 0px;
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+    #Home {
+        font-size: small;
+    }
+    .Imagen {
+        width: 75px;
+        height: 75px;
+    }
+}
