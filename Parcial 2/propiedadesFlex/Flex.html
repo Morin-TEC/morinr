@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="Flexstyle.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+
+        <h1>Flexbox</h1>
+    <i><b>Flexbox tiene como meta ser una forma más eficiente de crear diseños, alinear y distribuir espacios entre ítems en un contenedor, incluso cuando las dimensiones de esos ítems son desconocidas y/o dinámicas (en virtud de eso el término "flex").</b></i>
+
+    <h2><p>¿Qué es el flexbox?</p></h2>
+    <b>Durante mucho tiempo, las únicas herramientas disponibles para crear diseños CSS y posicionar elementos con buena compatibilidad entre browsers eran float y position. Sin embargo, estas herramientas tienen algunas limitaciones muy frustrantes, especialmente cuando se trata de responsividad.</b>
+    <b>Algunas tareas que consideramos básicas en un diseño, como centrar verticalmente un elemento secundario en relación con un elemento principal o hacer que los elementos secundarios ocupen la misma cantidad de espacio, o que las columnas tengan el mismo tamaño independientemente de la cantidad de contenido interno, fueron imposibles.</b>
+    <b>La herramienta Flexbox (de Flexible Box) fue creada para hacer estas tareas más sencillas y funcionales: los secundarios de un elemento con Flexbox se pueden posicionar en cualquier dirección y pueden tener dimensiones flexibles para adaptarse.</b>
+    
+    <h3><p>Elementos</p></h3>
+    <b>Flexbox es un módulo completo y no una propiedad única; algunos de ellos deben declararse en el contenedor (el elemento principal, que llamamos de flex container), mientras que otros deben declararse en los elementos secundarios (el flex ítems).</b>
+    <b>Si el diseño "estándar" se basa en las direcciones block e inline, el diseño Flex se basa en direcciones de "flex flow".</b>
+    <ul>
+        <li><b>Eje principal:</b> El eje principal de un flex container es el eje primario y a lo largo de él son insertados los flex ítems.</li>
+        <li><b>Main-start/Main-end:</b> Los flex ítems se insertan en el contenedor empezando por el lado start, dirigiéndose hacia el lado end.</li>
+        <li><b>Tamaño principal:</b> El ancho o alto de un flex ítem, dependiendo de la dirección del contenedor, es el tamaño principal del ítem. La propiedad de tamaño principal de un flex ítem puede ser tanto width como height, dependiendo de cuál esté en la dirección principal.</li>
+        <li><b>Eje transversal:</b> El eje perpendicular al eje principal se llama eje transversal. Su dirección depende de la dirección del eje principal.</li>
+        <li><b>Cross-start/Cross-end:</b> Líneas flex se llenan con ítems y se agregan al contenedor, comenzando desde el lado cross start del flex container hacia el lado cross end.</li>
+        <li><b>Cross size:</b> La propiedad cross size puede ser el ancho o el alto del ítem, lo que se encuentre en la transversal.</li>
+    </ul>
+    <p><img src="Imagen/Diagrama.jpg" width="500" height="240"></p>
+
+    <h3><p>Propiedades del flex-container (padre)</p></h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Propiedad</th>
+                <th>Función</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Display</td>
+                <td>Esta propiedad define un flex container; inline o block dependiendo de los valores pasados. Coloca todos los elementos secundarios directos en un contexto Flex.</td>
+                <td>flex o inline-flex </td>
+            </tr>
+            <tr>
+                <td>Flex-direction</td>
+                <td>Establece el eje principal, definiendo así la dirección en la que los flex ítems están alineados en el flex container.</td>
+                <td>row, row-reverse, column o column-reverse </td>
+            </tr>
+            <tr>
+                <td>Flex-wrap</td>
+                <td>Con esta propiedad puedes modificar este comportamiento y permitir que los ítems pasen a la siguiente línea según sea necesario.</td>
+                <td>nowrap, wrap o wrap-reverse </td>
+            </tr>
+            <tr>
+                <td>Flex-flow</td>
+                <td>Determina cuáles serán los ejes principal y transversal del contenedor.</td>
+                <td>row nowrap, row wrap, column nowrap o column wrap</td>
+            </tr>
+            <tr>
+                <td>Justify-content</td>
+                <td>Define la alineación de los ítems a lo largo del eje principal. </td>
+                <td>flex-start, flex-end, center, space-between, space-around o space-evenly</td>
+            </tr>
+            <tr>
+                <td>Align-items </td>
+                <td>Establece el comportamiento estándar de cómo flex ítems están alineados según el eje transversal (cross axis). En cierto modo, funciona de manera similar al justify-content, pero en el eje transversal (perpendicular al eje principal).</td>
+                <td>stretch, flex-start, flex-end, center o baseline</td>
+            </tr>
+            <tr>
+                <td>Align-content </td>
+                <td>Organiza las líneas dentro de un flex container cuando hay espacio adicional en el eje transversal, similar a cómo justify-content alinea ítems individuales dentro del eje principal.</td>
+                <td>flex-start, flex-end, center, space-between, space-around o stretch</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <br>
+
+    <h3><p>Propiedades de flex-ítem (hijo)</p></h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Propiedad</th>
+                <th>Función</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Order</td>
+                <td>Determina el orden en que aparecerán los elementos.</td>
+                <td>número (0, 1, 2, 3...)</td>
+            </tr>
+            <tr>
+                <td>Flex-grow</td>
+                <td>Define la habilidad de un flex ítem de crecer, según el caso. El valor de esta propiedad es un valor numérico sin indicación de unidad, que se utiliza para calcular la proporción.</td>
+                <td>número (0, 1, 2, 3...)</td>
+            </tr>
+            <tr>
+                <td>Flex-shrink </td>
+                <td>Establece la habilidad de un flex ítem para contraerse, según el caso.</td>
+                <td>número (0, 1, 2, 3...)</td>
+            </tr>
+            <tr>
+                <td>Flex-basis </td>
+                <td>Establece el tamaño estándar de un elemento antes de que se distribuya el espacio remanente del contenedor.</td>
+                <td>auto, 4rem, 30%, etc...</td>
+            </tr>
+            <tr>
+                <td>Flex</td>
+                <td>Esta es la propiedad shorthand para flex-grow, flex-shrink y flex-basis, combinadas.</td>
+                <td>0, 1 o auto</td>
+            </tr>
+            <tr>
+                <td>Align-self </td>
+                <td>Permite que la alineación estándar (o lo que esté definido por align-items) se sobrescriba para ítems individuales.</td>
+                <td>auto, flex-start, flex-end, center, baseline o strecth</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
