@@ -1,0 +1,251 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.Menu {
+    padding-left: 15px;
+}
+
+div.sidebar {
+    position: fixed;
+    background: #448d3a;
+    color: rgb(158, 207, 240);
+    width: 200px;
+    height: 100%;
+    overflow: auto;
+}
+
+.sidebar>h2 {
+    text-align: center;
+    margin: 0;
+    padding: 7px;
+    background: #8b32d4;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    padding: 7px;
+    font-size: larger;
+    color: rgb(158, 19, 19);
+}
+
+a:visited {
+    color: #fff;
+}
+
+a:hover {
+    background: #4249a3;
+    border-left: 4px solid rgb(207, 253, 0);
+    padding-left: 5px;
+}
+
+a:active {
+    background: #2a4e70;
+    border-left: 3px solid rgb(44, 160, 82);
+    color: #fff;
+}
+
+div.content {
+    float: left;
+    height: 100px;
+    padding: 20px;
+    width: calc(100%-200px);
+
+}
+
+.subOpcion {
+    display: none;
+}
+
+.Flexbox{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background-color: #1a41c4;
+}
+.content>.subOpcion {
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    margin: auto;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+#Inicio:target,
+#PlayStation:target,
+#Xbox:target,
+#Nintendo:target,
+#Steam:target,
+#Android:target {
+    display: block;
+}
+
+input {
+    display: none;
+}
+
+input:checked+.sidebar {
+    width: 0px;
+}
+
+input:checked~.content {
+    margin-left: 0px;
+    width: 100%;
+}
+
+label {
+    font-size: large;
+    font-weight: bold;
+    color: #083644;
+}
+
+.Icono {
+    vertical-align: middle;
+}
+
+.Imagen {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    font-weight: normal;
+    color: #000000;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+#Home {
+    text-align: center;
+    margin: 0;
+    font-size: xx-large;
+}
+
+.Detalles {
+    text-align: justify;
+    padding: 10px;
+    font-size: x-large;
+}
+
+div.sidebar {
+    float: left;
+    width: 200px;
+    height: 100%;
+    overflow: auto;
+    background: #6f3f70;
+    color: #fff;
+}
+.sidebar>h2 {
+    text-align: center;
+    margin: 0;
+    padding: 7px;
+    background: #531557;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    padding: 7px;
+    font-size: larger;
+    color: #fff;
+}
+a:visited {
+    color: #fff;
+}
+
+a:hover {
+    background: #946894;
+    border-left: 4px solid #eee;
+    padding-left: 5px;
+}
+
+a:active {
+    background: #5c2a70;
+    border-left: 3px solid rgb(40, 6, 80);
+    color: #fff;
+}
+
+@media screen and (max-width: 1200px) {
+    div.sidebar {
+        float: none;
+        width: 100%;
+        height: 90px;
+    }
+    .sidebar h2 {
+        float: none;
+        text-align: center;
+    }
+    .sidebar a {
+        padding: 5px 0%;
+        float: left;
+        width: calc(100%/6);
+        font-size: large;
+    }
+    div.content {
+        width: 100%;
+    }
+    input:checked+.sidebar {
+        height: 0px;
+    }
+    input:checked~.content {
+        margin-top: 0px;
+    }
+    #Home {
+        font-size: medium;
+        font-weight: bold;
+    }
+    .Imagen {
+        width: 100px;
+        height: 100px;
+    }
+    .Flexbox{
+        flex-direction: column;
+    }
+    .content>.subOpcion{
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .sidebar a {
+        font-size: medium;
+    }
+    .sidebar a>img {
+        width: 100px;
+        height: 100px;
+    }
+    .Detalles {
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sidebar h2 {
+        float: none;
+        text-align: center;
+    }
+    .sidebar a {
+        padding: 5px 0px;
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+    #Home {
+        font-size: small;
+    }
+    .Imagen {
+        width: 100px;
+        height: 100px;
+    }
+    .Flexbox{
+        height: 150hv;
+    }
+}
