@@ -65,7 +65,7 @@ div.content {
     height: 100vh;
     display: flex;
     flex-direction: row;
-    background-color: #1a41c4;
+    background-color: #7e4bcf;
 }
 .content>.subOpcion {
     width: 100%;
@@ -139,14 +139,14 @@ div.sidebar {
     width: 200px;
     height: 100%;
     overflow: auto;
-    background: #6f3f70;
-    color: #fff;
+    background: #448d3a;
+    color: rgb(158, 207, 240);
 }
 .sidebar>h2 {
     text-align: center;
     margin: 0;
     padding: 7px;
-    background: #531557;
+    background: #8b32d4;
 }
 
 a {
@@ -154,24 +154,30 @@ a {
     text-decoration: none;
     padding: 7px;
     font-size: larger;
-    color: #fff;
+    color: rgb(158, 19, 19);
 }
 a:visited {
     color: #fff;
 }
 
 a:hover {
-    background: #946894;
-    border-left: 4px solid #eee;
+    background: #4249a3;
+    border-left: 4px solid rgb(207, 253, 0);
     padding-left: 5px;
 }
 
 a:active {
-    background: #5c2a70;
-    border-left: 3px solid rgb(40, 6, 80);
+    background: #2a4e70;
+    border-left: 3px solid rgb(44, 160, 82);
     color: #fff;
 }
 
+div.content {
+    background-color: rgb(70, 160, 110);
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+}
 @media screen and (max-width: 1200px) {
     div.sidebar {
         float: none;
