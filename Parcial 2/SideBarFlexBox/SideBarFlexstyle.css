@@ -4,16 +4,20 @@
     padding: 0;
 }
 
-.Menu {
-    padding-left: 15px;
+.Flexbox {
+    width: 100vw;
+    height: 150vh;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(70, 160, 110);
 }
 
 div.sidebar {
-    position: fixed;
+    float: left;
     background: #448d3a;
     color: rgb(158, 207, 240);
     width: 200px;
-    height: 100%;
+    height: 150vh;
     overflow: auto;
 }
 
@@ -50,32 +54,13 @@ a:active {
 
 div.content {
     float: left;
-    height: 100px;
-    padding: 20px;
-    width: calc(100%-200px);
-
+    width: calc(100% - 200px);
+    padding: 1px 16px;
+    height: 150vh;
 }
 
 .subOpcion {
     display: none;
-}
-
-.Flexbox{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    background-color: #7e4bcf;
-}
-.content>.subOpcion {
-    width: 100%;
-    height: 100%;
-    padding-top: 20px;
-    margin: auto;
-}
-.content {
-    display: flex;
-    flex-direction: column;
 }
 
 #Inicio:target,
@@ -96,8 +81,7 @@ input:checked+.sidebar {
 }
 
 input:checked~.content {
-    margin-left: 10px;
-    width: 100%;
+    margin-left: 0px;
 }
 
 label {
@@ -124,63 +108,21 @@ p {
 
 #Home {
     text-align: center;
+    margin: 0;
     font-size: xx-large;
 }
 
 .Detalles {
     text-align: justify;
+    padding: 10px;
     font-size: x-large;
 }
 
-div.sidebar {
-    float: left;
-    width: 200px;
-    height: 100%;
-    overflow: auto;
-    background: #448d3a;
-    color: rgb(158, 207, 240);
-}
-.sidebar>h2 {
-    text-align: center;
-    margin: 0;
-    padding: 7px;
-    background: #8b32d4;
-}
-
-a {
-    display: block;
-    text-decoration: none;
-    padding: 7px;
-    font-size: larger;
-    color: rgb(158, 19, 19);
-}
-a:visited {
-    color: #fff;
-}
-
-a:hover {
-    background: #4249a3;
-    border-left: 4px solid rgb(207, 253, 0);
-    padding-left: 5px;
-}
-
-a:active {
-    background: #2a4e70;
-    border-left: 3px solid rgb(44, 160, 82);
-    color: #fff;
-}
-
-div.content {
-    background-color: #7e4bcf;
-    margin-left: 200px;
-    padding: 1px 16px;
-    height: 1000px;
-}
 @media screen and (max-width: 1200px) {
     div.sidebar {
-        position: relative;
+        float: none;
         width: 100%;
-        height: auto;
+        height: 15%;
     }
     .sidebar h2 {
         float: none;
@@ -193,7 +135,7 @@ div.content {
         font-size: large;
     }
     div.content {
-        margin-left: 0;
+        width: 100%;
     }
     input:checked+.sidebar {
         height: 0px;
@@ -209,9 +151,15 @@ div.content {
         width: 100px;
         height: 100px;
     }
+    .Flexbox {
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 800px) {
+    div.sidebar {
+        height: 30%;
+    }
     .sidebar a {
         font-size: medium;
     }
@@ -225,39 +173,32 @@ div.content {
 }
 
 @media screen and (max-width: 600px) {
+    div.sidebar {
+        float: none;
+        text-align: center;
+        width: 100%;
+        height: 40%;
+        flex-direction: column;
+    }
+    .Flexbox {
+        flex-direction: column;
+        height: 300vh;
+    }
+    .sidebar h2 {
+        float: none;
+        text-align: center;
+    }
     .sidebar a {
+        padding: 5px 0px;
+        float: none;
         text-align: center;
         width: 100%;
     }
-    a
-    {
-        text-align: center;
-    }
-    .sidebar>a:hover{
-        border-bottom: 0px solid transparent;
-        border: 1px solid transparent;
-        color: violet;
-    }
-    div.slidebar {
-        float:none;
-        text-align: center;
-        width: auto;
-        height: 300px;
-        flex-direction: column;
-      }
     #Home {
         font-size: small;
     }
     .Imagen {
-        width: 75px;
-        height: 75px;
-    }
-    .Flexbox{
-        height: 150hv;
-        flex-direction: column;
-    }
-    div.content {
-        margin-bottom: 0;
-        width: 100%;
+        width: 100px;
+        height: 100px;
     }
 }
