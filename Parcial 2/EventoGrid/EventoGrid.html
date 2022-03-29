@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="EventoGrid.css" >
+    </head>
+    <body>
+        <div id="idcontent" class="contenedor">
+            <div id="caja1" class="caja">Caja 1</div>
+            <div id="caja2" class="caja">Caja 2</div>
+            <div id="caja3" class="caja">Caja 3</div>
+            <div id="caja4" class="caja">Caja 4</div>
+            <div id="caja5" class="caja">Caja 5</div>
+            <div id="caja6" class="caja">Caja 6</div>
+        </div>
+        <script type="text/javascript">
+            window.onload = function()
+            {
+            document.getElementById("idcontent").addEventListener("click",function(evento)
+            {	
+                document.getElementById(evento.target.id).classList.toggle("cajacambio");
+            });
+            }
+        </script>
+    </body>
+</html>
