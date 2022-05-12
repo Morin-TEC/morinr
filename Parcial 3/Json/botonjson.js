@@ -25,3 +25,17 @@ window.onload = function() {
     }
     
     } 
+$(document).ready(function() {
+    $('#btnjson').click(function() {
+        $.post('registro.php',{},function(data){
+    
+              console.log(data);
+              $('#inputTituloVideojuego').val(data.inputTituloVideojuego);
+              $('#Genero').val(data.Genero);
+              $('#inputPrecio').val(data.inputPrecio);
+              $('#Fecha').val(data.Fecha);
+    
+          },'json');
+    });
+    });
+    
