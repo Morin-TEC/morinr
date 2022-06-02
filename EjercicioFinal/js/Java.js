@@ -11,8 +11,8 @@ $(document).ready(function() {
     });
     
     $('#btnEliminarBD').click(function() {
-            let paridCte=$('#ID_videojuego').val();
-            $.post('./php/Eliminar.php',{par1:paridCte},function(data){
+            let paridCte=$('#ID').val();
+            $.post('./php/Eliminar.php',{ID:ID},function(data){
                 refrescar(data);
             },'json');
     
@@ -54,7 +54,7 @@ $(document).ready(function() {
         let Genero =  $('#Genero').val();
         let Precio = $('#Precio').val();
         let Fecha = $('#Fecha').val();
-        $.post('./php/Actualizar.php',{par1:paridCte,ID:ID,Juego:Titulo,Gen:Genero,Pre:Precio,Date:Fecha
+        $.post('./php/Actualizar.php',{ID:ID,Juego:Titulo,Gen:Genero,Pre:Precio,Date:Fecha
         });
         Swal.fire(
             'Accion' , 

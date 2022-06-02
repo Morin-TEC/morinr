@@ -18,7 +18,7 @@ try {
   //$con->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
   try{
-    $sql = "delete from videojuego where ID=".$paridCte;
+    $sql = "delete from videojuego where ID=".$iduser;
     $query = $con->prepare($sql);
     $query->execute();
     $result = $query->fetch(PDO::FETCH_ASSOC);
