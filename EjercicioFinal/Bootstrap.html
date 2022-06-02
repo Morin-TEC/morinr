@@ -10,59 +10,41 @@
     <script src="./js/Java.js"></script>
 </head>
 
-<body style="background-color: rgb(255, 255, 255);">
+<body style="background-color: rgb(113, 222, 239);">
     <div class="container bg-light">
         <form class="form">
       <div class="text-center m-4" id="enca">
         <h2>Registro de videojuegos</h2>
       </div>  
 
-      <div class="container">
         <div class="row">
-          <div class="col-sm-12 col-md-6 col-lg-8">
+          <div class="form-group col-sm-12 col-md-6 col-lg-6">
             <label for="ID">ID:</label>
+            <input type="text" class="form-control" id="ID" placeholder="0" disabled>
           </div>
-          <div class="col">
-            <input type="text" class="form-control" id="ID" placeholder="0">
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-8">
+          <div class="form-group col-sm-12 col-md-6 col-lg-6">
             <label for="TituloVideojuego">Título del videojuego:</label>
-          </div>
-          <div class="col">
-            <input type="text" class="form-control" id="Titulo" placeholder="Nombre">
+            <input type="text" class="form-control" id="inputTituloVideojuego" placeholder="Nombre">
           </div>
         </div>
-      </div>
 
-      <div class="container">
         <div class="row">
-          <div class="col-sm-12 col-md-6 col-lg-8">
+          <div class="form-group col-sm-12 col-md-6 col-lg-6">
             <label for="Genero">Genero:</label>
+            <input type="text" class="form-control" id="Genero" placeholder="FPS">
           </div>
-          <div class="col">
-            <input type="text" class="form-control" id="Genero" placeholder="0">
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-8">
+          <div class="form-group col-sm-12 col-md-6 col-lg-6">
             <label for="Precio">Precio:</label>
-          </div>
-          <div class="col">
-            <input type="text" class="form-control" id="Titulo" placeholder="Nombre">
+            <input type="text" class="form-control" id="inputPrecio" placeholder="1200">
           </div>
         </div>
-      </div>
-
-
     
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-12 col-md-6 col-lg-8">
-                <label for="TituloVideojuego">Fecha de lanzamiento: </label>
-              </div>
-              <div class="col">
-                <input type="text" class="form-control" id="Fecha" placeholder="1 de Enero de 1999">
-              </div>
-            </div>
+        <div class="row">
+          <div class="form-group col-sm-12 col-md-12 col-lg-12">
+            <label for="Fecha">Fecha de lanzamiento:</label>
+            <input type="text" class="form-control" id="Fecha" placeholder="20 de Noviembre del 2020">
           </div>
+        </div>
 
         <div class="text-center mb-3">
           <strong class="mb-2">Plataforma: </strong>
@@ -118,11 +100,12 @@
 
       <div class="text-center">
         <button id="btnRegistrarBD" type="button" class="btn btn-success"   title="Insertar registro de la BD">Registrar videojuego</button>
-        <button id="btnConsultarBD" type="button" class="btn btn-success"   title="Obtiene registro de la BD">Consultar BD</button>
-        <button id="btnActualizarBD" type="button" class="btn btn-success"   title="Guardar cambios de la BD">Actualizar BD</button>
-        <button id="btnEliminarBD" type="button" class="btn btn-success"   title="Eliminar registro de la BD">Eliminar BD</button>
+        <button id="btnConsultarBD" type="button" class="btn btn-success"   title="Obtiene registro de la BD">Consultar videojuego</button>
+        <button id="btnActualizarBD" type="button" class="btn btn-success"   title="Guardar cambios de la BD">Actualizar videojuego</button>
+        <button id="btnEliminarBD" type="button" class="btn btn-success"   title="Eliminar registro de la BD">Eliminar videojuego</button>
+        <script src = "https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
       </div>
-
+      
       <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">

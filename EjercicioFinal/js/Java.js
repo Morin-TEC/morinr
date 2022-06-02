@@ -1,23 +1,26 @@
 $(document).ready(function() {
 
     $('#btnConsultarBD').click(function() {
-        $('#modal1').modal();
-        $('#modal1').on('hidden.bs.modal',function(e){
-            let paridCte=$('#ID').val();
-            $.post('./php/Consultar.php',{par1:paridCte},function(data){
-                refrescar(data);
-            },'json');
+        swal("Ingresa el ID a consultar: ",
+        {
+          content:"input",
         })
+        .then((parid) => {
+          console.log("La consulta es: "+parid);
+            $.post('./php/Consultar.php',{par1:parid},function(data){
+              refrescar(data);
+              },'json');
+        });
     });
     
     $('#btnEliminarBD').click(function() {
-            let paridCte=$('#ID').val();
-            $.post('./php/Eliminar.php',{ID:ID},function(data){
+        let parid = $('#ID').val();
+            $.post('./php/Eliminar.php',{par1:parid},function(data){
                 refrescar(data);
             },'json');
     
             Swal.fire(
-                'Accion' , 
+                '¡Genial!' , 
                  'Videojuego eliminado' , 
                  'success', 
                 );
@@ -26,14 +29,14 @@ $(document).ready(function() {
     
     $('#btnRegistrarBD').click(function() {
         let ID = $('#ID').val();
-        let Titulo = $('#Titulo').val();
+        let inputTituloVideojuego = $('#inputTituloVideojuego').val();
         let Genero =  $('#Genero').val();
-        let Precio = $('#Precio').val();
+        let inputPrecio = $('#inputPrecio').val();
         let Fecha = $('#Fecha').val();
-        $.post('./php/Registrar.php',{ID:ID,Juego:Titulo,Gen:Genero,Pre:Precio,Date:Fecha
+        $.post('./php/Registrar.php',{ID:ID,Juego:inputTituloVideojuego,Gen:Genero,Pre:inputPrecio,Date:Fecha
         });
         Swal.fire(
-            'Accion' , 
+            '¡Genial!' , 
              'Videojuego registrado' , 
              'success', 
             );
@@ -42,22 +45,22 @@ $(document).ready(function() {
     function refrescar(objeto) {
         console.log(objeto);
         $('#ID').val(objeto.ID);
-        $('#Titulo').val(objeto.Titulo);
+        $('#inputTituloVideojuego').val(objeto.inputTituloVideojuego);
         $('#Genero').val(objeto.Genero);
-        $('#Precio').val(objeto.Precio);
+        $('#inputPrecio').val(objeto.inputPrecio);
         $('#Fecha').val(objeto.Fecha);
     }
     
     $('#btnActualizarBD').click(function() {
         let ID = $('#ID').val();
-        let Titulo = $('#Titulo').val();
+        let inputTituloVideojuego = $('#inputTituloVideojuego').val();
         let Genero =  $('#Genero').val();
-        let Precio = $('#Precio').val();
+        let inputPrecio = $('#inputPrecio').val();
         let Fecha = $('#Fecha').val();
-        $.post('./php/Actualizar.php',{ID:ID,Juego:Titulo,Gen:Genero,Pre:Precio,Date:Fecha
+        $.post('./php/Actualizar.php',{ID:ID,Juego:inputTituloVideojuego,Gen:Genero,Pre:inputPrecio,Date:Fecha
         });
         Swal.fire(
-            'Accion' , 
+            '¡Genial!' , 
              'Videojuego modificado' , 
              'success', 
             );

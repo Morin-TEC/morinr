@@ -1,6 +1,5 @@
 <?php
 
-$iduser=$_POST['par1'];
 
 $hostname='localhost';
 $database='a19100222';

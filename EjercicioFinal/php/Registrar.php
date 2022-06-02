@@ -1,13 +1,13 @@
 <?php
  include("ConexionBD.php");
         $ID= $_POST['ID'];
-        $Titulo = $_POST['Juego'];
+        $inputTituloVideojuego = $_POST['Juego'];
         $Genero = $_POST['Gen'];
-        $Precio = $_POST['Pre'];
+        $inputPrecio = $_POST['Pre'];
         $Fecha =$_POST['Date'];
         try{
-        $sql = "insert into videojuego  (ID,TituloVideojuego,Genero,inputPrecio,Fecha) 
-        VALUES('$ID', '$Titulo', '$Genero', '$Precio', '$Fecha')";
+        $sql = "insert into videojuego (inputTituloVideojuego, Genero, inputPrecio, Fecha)S
+        VALUES('$inputTituloVideojuego', '$Genero', '$inputPrecio', '$Fecha')";
         $query = $con->prepare($sql);
     $query->execute();
     $query->closeCursor();
